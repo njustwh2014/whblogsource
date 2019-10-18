@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
+title: 王欢的小世界
+subtitle: 每天进步一点点
+description: 切勿清歌与漏舟之中，痛饮在焚屋之下
+keywords: Java, 中间件, Spring, Redis
+author: Wang Huan
 language: zh-CN
 timezone:
 
