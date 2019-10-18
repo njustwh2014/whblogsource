@@ -12,6 +12,7 @@ deploy:
   repository: https://github.com/your_github_usrname/your_github_usrname.github.io
   branch: master
 ```
+then run the following command in terminal(git bash or cmder  etc. on windows or other os)
 
 ```bash
 git clone git@github.com:njustwh2014/whblogsource.git
