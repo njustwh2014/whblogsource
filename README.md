@@ -4,6 +4,8 @@ hexo blog source
 
 # how use
 
+**refer to:** https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md
+
 **change the file _config.xml:**
 first create the reposity: your_github_usrname.github.io
 ```yml

@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://eternalhorizon.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -86,12 +86,7 @@ permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
 
-# 文章字数统计
-wordCount:
-  enable: false # 将这个值设置为 true 即可.
-  postWordCount: true
-  min2read: true
-  totalCount: true
+
 
 # RSS订阅
 feed:

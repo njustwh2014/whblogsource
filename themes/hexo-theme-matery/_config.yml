@@ -44,8 +44,8 @@ menu:
 time:
   enable: true
   year: 2019 # 年份
-  month: 06 # 月份
-  date: 28 # 日期
+  month: 10 # 月份
+  date: 18 # 日期
   hour: 00 # 小时
   minute: 00 # 分钟
   second: 00 # 秒
@@ -70,7 +70,7 @@ dream:
 # Whether to display the musics.
 # 是否在首页显示音乐.
 music:
-  enable: false
+  enable: true
   showTitle: true
   title: 听听音乐
   fixed: false # 开启吸底模式
@@ -116,17 +116,17 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/njustwh2014
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  # https://github.com/xxx
-  email: # xxx@xxx.com
+  github:  https://github.com/njustwh2014
+  email:   seuwh2018@foxmail.com
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
-  qq: # 123456789
+  qq:  744640112
   weibo: # https://weibo.com/xxx
   zhihu: # https://www.zhihu.com/xxx
   rss: true # true、false
@@ -177,7 +177,7 @@ mathjax:
 # 文章字数统计、阅读时长、总字数统计
 # 激活前请确认你已经安装了 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
 wordCount:
-  enable: false
+  enable: true
   postWordCount: true
   min2read: true
   totalCount: true
@@ -200,21 +200,21 @@ profile:
 myProjects:
   enable: true
   data:
-    hexo-theme-matery:
+    blog:
       icon: fas fa-file-alt
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: http://github.com/blinkfox/hexo-theme-matery
-      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    zealt:
+      url: https://github.com/njustwh2014/whblogsource/tree/master/themes/hexo-theme-matery
+      desc: This is my private blog website source.
+    spring-project:
         icon: fas fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/zealot
-        desc: 一个轻量级的SQL和参数动态生成工具库
-    typora-vue-theme:
-        icon: fas fa-file-alt
-        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: This is a typora theme inspired by Vue document style.
+        url: https://github.com/njustwh2014/MySpring
+        desc: 基于springboot+vue+mybatis+redis实现新闻网站的前后端
+    # typora-vue-theme:
+    #     icon: fas fa-file-alt
+    #     iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+    #     url: https://github.com/blinkfox/typora-vue-theme
+    #     desc: This is a typora theme inspired by Vue document style.
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -307,7 +307,7 @@ valine:
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
   enable: true
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/njustwh2014/whblogsource/tree/master/themes/hexo-theme-matery
   title: Fork Me
 
 # The password verification feature of read post. To use this feature,
@@ -482,8 +482,8 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 从来没有真正的绝境, 只有心灵的迷途
-  sub2: Never really desperate, only the lost of the soul
+  sub1: 眼前有余忘缩手，身后无路想回头。
+  sub2: 切勿清歌于漏舟之中，痛饮在焚屋之下。
   
 # 手机二级菜单.
 navMenu:
