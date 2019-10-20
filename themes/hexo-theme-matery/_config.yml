@@ -208,7 +208,7 @@ myProjects:
     spring-project:
         icon: fas fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/njustwh2014/MySpring
+        url: https://github.com/njustwh2014/VueSpringboot
         desc: 基于springboot+vue+mybatis+redis实现新闻网站的前后端
     # typora-vue-theme:
     #     icon: fas fa-file-alt
