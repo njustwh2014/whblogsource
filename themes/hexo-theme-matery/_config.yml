@@ -291,10 +291,15 @@ livere:
 # The configuration of the Valine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+
+# Install leancloud's js-sdk
+# npm install leancloud-storage --save
+# Install valine
+# npm install valine --save
 valine:
-  enable: false
-  appId:
-  appKey:
+  enable: true
+  appId: Fhg8nAsyMme0K6TqY820NK17-gzGzoHsz
+  appKey: zoqpwVMBfhi2YQ9xf94Jdbf2
   notify: false
   verify: false
   visitor: true
