@@ -18,4 +18,4 @@ npm install valine --save
 
 ## 参考官方教程：https://valine.js.org/quickstart.html
 
-![配置文件图](./valinecomment/1.png)
+![配置文件图](valine评论组件使用/1.png)
