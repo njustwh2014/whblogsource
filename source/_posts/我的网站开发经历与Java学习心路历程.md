@@ -19,9 +19,15 @@ tags:
 ---
 
 ## 网站介绍
+
 ### 功能介绍
+
+http://www.seumstc.top:8090/index.html
+
 ### 什么是前后端分离的开发模式
+
 ### 开发这样一个网站我们需要的技术栈
+
 ## Java学习历程
 ![Java后端学习路线](我的网站开发经历与Java学习心路历程/javaweblearningroute.png)
 
@@ -76,18 +82,84 @@ Java作为一门强类型语言，我们学习Java需要首先明确**面向对�
 
 > Java操作数据库的API(如对于Mysql的Mybatis，对于Redis的Jedis)
 ### 框架学习
+
+**推荐书籍：** 《Spring实战》《Springboot 实战》
 Java的一大优势就是拥有很多优秀的开源与非开源的框架。
 
 ![](http://pzpoejx7j.bkt.clouddn.com/JustCopyIt.jpg)
 
 但是首推自然是Spring全家桶。
 
+![Spring框架](http://pzpoejx7j.bkt.clouddn.com/springframe.png)
+
+同样，对于一个框架学习，需要抓住切入点，可以从以下方面展开学习：
+
+> Spring是什么？它有什么优点？
+
+
+> 什么IOC(依赖注入或者控制反转)？
+
+
+
+> 什么是AOP(面向切片编程)？
+
+
+> Spring的结构是怎样的？
+
+
+> Spring中涉及的设计模式
+
+
 
 ### 计算机网络与Web基础
+
+**推荐书籍：**《深入理解计算机网络》
+
+参考连接：https://github.com/Snailclimb/JavaGuide/blob/master/docs/network/%E5%B9%B2%E8%B4%A7%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.md
+
+这部分的学习，需要系统性的学习，从网络基础的TCP协议到HTTP协议或SSH服务协议等，理解网络分层模型。
+
 ### 一些工具
  + git
  + docker
+ + nginx
+ + ...
+  
 ### 前端基础
+
+> 三件套HTML、JavaScript、CSS基础
+
+> 利用一些框架如React、Angular、Vue等实现一些简单的前端交互界面。
+
+
 ### 中间件
+
+> 什么是中间件
+
+![阿里中间件](http://pzpoejx7j.bkt.clouddn.com/alimiddleware.png)
+
+目前，它并没有很严格的定义，但是普遍接受IDC的定义：中间件是一种独立的系统软件服务程序，分布式应用软件借助这种软件在不同的技术之间共享资源，中间件位于客户机服务器的操作系统之上，管理计算资源和网络通信。从这个意义上可以用一个等式来表示中间件：中间件=平台+通信，这也就限定了只有用于分布式系统中才能叫中间件，同时也把它与支撑软件和实用软件区分开来。
+
+> 中间件分类
+
++ 底层中间件: 用于支撑单个应用系统或解决单一类问题
+  - 事务处理中间件(TPM)
+  - 应用服务器(WAS)
+  - 消息中间件(MOM)
+  - 数据访问中间件(UDA)
+  - ...
++ 高层中间件: 用于系统整合
+  - 企业应用集成中间件(EAI Suites)
+  - 工作流中间件(Workflow)
+  - 门户中间件(Portal)
+  - ...
+
 ### 一些测试框架
+
+**不懂测试的开发不是好的开发**
+
 ### 学无止境，寻找Java替代品
+
+大家在学习一门语言要想想这门语言的短处在哪？
+
+建议大家在学习之余，不管你是做算法还是开发，都要努力提升自己的编程能力，推荐学习Nodejs和Golang。
