@@ -189,6 +189,47 @@ w-x j
 ----------
 w-x-j
 ```
+
+## 模式与匹配
+Java 中使用正则表达式需要用到两个类，分别为 java.util.regex.Pattern 和 java.util.regex.Matcher。
+
++ 第一步，通过正则表达式创建模式对象 Pattern。
+
++ 第二步，通过模式对象 Pattern，根据指定字符串创建匹配对象 Matcher。
+
++ 第三步，通过匹配对象 Matcher，根据正则表达式操作字符串。
+```java
+String str="Wanghuan is a cool boy!";
+Pattern pattern=Pattern.compile("\\w+");
+// Java 中忽略大小写，有两种写法：
+// Pattern pattern = Pattern.compile("\\w+", Pattern.CASE_INSENSITIVE);
+// Pattern pattern = Pattern.compile("(?i)\\w+"); // 推荐写法
+Matcher matcher=pattern.matcher(str);
+while(matcher.find()){
+    System.out.print("Start index: " + matcher.start());
+    System.out.print(" End index: " + matcher.end() + " ");
+    System.out.println(matcher.group());
+}
+// 创建第两个模式，将空格替换为 -
+Pattern replace = Pattern.compile("\\s+");
+Matcher matcher2 = replace.matcher(str);
+System.out.println(matcher2.replaceAll("-"));
+```
+
+result:
+
+```bash
+Start index: 0 End index: 8 Wanghuan
+Start index: 9 End index: 11 is
+Start index: 12 End index: 13 a
+Start index: 14 End index: 18 cool
+Start index: 19 End index: 22 boy
+Wanghuan-is-a-cool-boy!
+```
+
+## 常用例子
+
+参考文章[Java 正则表达式详解](https://segmentfault.com/a/1190000009162306)
 ## 参考文章
 > [Java 正则表达式详解](https://segmentfault.com/a/1190000009162306)
 
