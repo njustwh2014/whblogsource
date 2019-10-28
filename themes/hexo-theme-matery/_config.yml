@@ -305,7 +305,7 @@ valine:
   visitor: true
   avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
-  placeholder: 'just go go' # Comment Box placeholder
+  placeholder: 留下邮箱，有回复时你将收到提醒，邮箱不会被公开。 # Comment Box placeholder
   background: /medias/comment_bg.png
 
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address

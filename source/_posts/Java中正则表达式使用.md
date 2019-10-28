@@ -74,6 +74,121 @@ public static void main(String[] args) {
 ```
 上面的例子中，我们使用了 [.] 来匹配普通字符 . 而不需要使用 [\\.]。因为正则对于 [] 中的 .，会自动处理为 [\.]，即普通字符 . 进行匹配。
 
+### 仅分组但无反向引用
+当我们在小括号 () 内的模式开头加入 ?:，那么表示这个模式仅分组，但不创建反向引用。
+
+```java
+String str = "img.jpg";
+// 分组且创建反向引用
+//        Pattern pattern = Pattern.compile("(jpg|png)");
+//        Matcher matcher = pattern.matcher(str);
+//        while (matcher.find()) {
+//            System.out.println(matcher.group());//jpg
+//            System.out.println(matcher.group(1));//jpg
+//        }
+
+// 分组但不创建反向引用
+Pattern pattern = Pattern.compile("(?:jpg|png)");
+Matcher matcher = pattern.matcher(str);
+while (matcher.find()) {
+    System.out.println(matcher.group());//jpg
+    System.out.println(matcher.group(1));//Exception in thread "main" java.lang.IndexOutOfBoundsException: No group 1
+}
+```
+
+### 分组的反向引用副本
+Java 中可以在小括号中使用 ?<name> 将小括号中匹配的内容保存为一个名字为 name 的副本。
+
+```java
+String str="@wanghuan is a cool boy.";
+Pattern pattern=Pattern.compile("@(?<first>\\w+\\s)");
+Matcher matcher=pattern.matcher(str);
+while(matcher.find()){
+    System.out.println(matcher.group());//@wanghuan
+    System.out.println(matcher.group(1));//wanghuan
+    System.out.println(matcher.group("first"));//wanghuan
+}
+```
+
+### 否对先行断言
+我们可以创建否定先行断言模式的匹配，即某个字符串后面不包含另一个字符串的匹配模式。
+
+否定先行断言模式通过 (?!pattern) 定义。比如，我们匹配后面不是跟着 "b" 的 "a"：
+```java
+Pattern pattern=Pattern.compile("a(?!a)");
+```
+
+### 指定正则表达式的模式
+可以在正则开头指定模式修饰符。
+
+> (?i) 使正则忽略大小写。
+
+
+> (?s) 表示单行模式（"single line mode"）使正则的 . 匹配所有字符，包括换行符。
+
+
+> (?m) 表示多行模式（"multi-line mode"），使正则的 ^ 和 $ 匹配字符串中每行的开始和结束。
+
+### java中反斜杠
+反斜杠 \ 在 Java 中表示转义字符，这意味着 \ 在 Java 拥有预定义的含义。
+
+这里例举两个特别重要的用法：
+
++ 在匹配 . 或 { 或 [ 或 ( 或 ? 或 $ 或 ^ 或 * 这些特殊字符时，需要在前面加上 \\，比如匹配 . 时，Java 中要写为 \\.，但对于正则表达式来说就是 \.。
+
+
++ 在匹配 \ 时，Java 中要写为 \\\\，但对于正则表达式来说就是 \\。
+
+
+**注意：** Java 中的正则表达式字符串有两层含义，首先 Java 字符串转义出符合正则表达式语法的字符串，然后再由转义后的正则表达式进行模式匹配。
+
+### 易错示例
+
+> [jpg|png] 表示匹配字符j或p或g或p或n或g中的任意一个字符
+
+> (jpg|png) 表示匹配jpg或png
+
+## 在字符串中使用正则表达式
+
+### 内置的字符串正则处理方法
+在 Java 中有四个内置的运行正则表达式的方法，分别是 matches()、split())、replaceFirst()、replaceAll()。注意 replace() 方法不支持正则表达式。
+
+|方法|描述|
+|:--|:--|
+|s.matches("regex")	|当仅且当正则匹配整个字符串时返回 true|
+|s.split("regex")	|按匹配的正则表达式切片字符串|
+|s.replaceFirst("regex", "replacement")	|替换首次匹配的字符串片段|
+|s.replaceAll("regex", "replacement")	|替换所有匹配的字符|
+
+### 示例
+```java
+System.out.println("wxj".matches("wxj"));
+System.out.println("----------");
+
+String[] array = "w x j".split("\\s");
+for (String item : array) {
+    System.out.println(item);
+}
+System.out.println("----------");
+
+System.out.println("w x j".replaceFirst("\\s", "-"));
+System.out.println("----------");
+
+System.out.println("w x j".replaceAll("\\s", "-"));
+```
+
+result:
+```bash
+true
+----------
+w
+x
+j
+----------
+w-x j
+----------
+w-x-j
+```
 ## 参考文章
 > [Java 正则表达式详解](https://segmentfault.com/a/1190000009162306)
 
