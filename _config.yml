@@ -64,7 +64,7 @@ category_map:
 tag_map:
 # emoj支持
 githubEmojis:
-  enable: true
+  enable: false
   className: github-emoji
   inject: true
   styles:
