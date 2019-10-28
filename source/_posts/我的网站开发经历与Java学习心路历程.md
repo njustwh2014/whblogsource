@@ -26,7 +26,11 @@ http://www.seumstc.top:8090/index.html
 
 ### 什么是前后端分离的开发模式
 
+**Web研发模式演变：**https://github.com/lifesinger/blog/issues/184
+
+
 ### 开发这样一个网站我们需要的技术栈
+
 
 ## Java学习历程
 ![Java后端学习路线](我的网站开发经历与Java学习心路历程/javaweblearningroute.png)
