@@ -240,6 +240,24 @@ public boolean isNumeric(char[] str) {
 ```
 
 更多例子参考文章[Java 正则表达式详解](https://segmentfault.com/a/1190000009162306)
+
+## 正则表达式检验网站
+推荐一个网站，这个网站可以检查你写的正则表达式和对应的字符串匹配时会不会有问题。
+[Online regex tester and debugger: PHP, PCRE, Python, Golang and JavaScript](https://regex101.com/)
+
+## 对于量词匹配的三种模式
+使用正则表达式时要注意对于量词匹配的三种模式使用，从而优化正则表达式的效率。
+
+> 贪婪模式
+
+> 懒惰模式
+
+> 独占模式
+
+具体细节可以参考文章[一个由正则表达式引发的血案](https://www.cnblogs.com/study-everyday/p/7426862.html)
+
 ## 参考文章
 > [Java 正则表达式详解](https://segmentfault.com/a/1190000009162306)
+
+> [一个由正则表达式引发的血案](https://www.cnblogs.com/study-everyday/p/7426862.html)
 
