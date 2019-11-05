@@ -336,14 +336,14 @@ busuanziStatistics:
 # Add google analytics configuration
 # 添加 Google Analytics 配置
 googleAnalytics:
-  enable: false
-  id:
+  enable: true
+  id: UA-151523301-1
 
 # Add baidu analytics configuration
 # 添加 baidu Analytics 配置
 baiduAnalytics:
-  enable: false
-  id: 
+  enable: true
+  id: e387edbea506d311dbff53ded17a4db5
   
 # 百度搜索资源平台提交链接
 baiduPush: true
