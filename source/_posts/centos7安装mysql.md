@@ -31,7 +31,7 @@ yum repolist all | grep mysql
 > 禁用最新版本mysql8.0
 ```bash
 yum-config-manager --disable mysql80-community
-``
+```
 
 > 启用我们需要的mysql5.7
 ```bash
