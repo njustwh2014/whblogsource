@@ -14,8 +14,8 @@ tags:
   - Spring
   - JavaScript
   - Vue
-  - Redis
-  - Mysql
+  - redis
+  - mysql
 ---
 
 ## 网站介绍
