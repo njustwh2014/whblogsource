@@ -6,7 +6,7 @@ tags:
     - grafana
     - java
 categories: elasticsearch
-img: http://pzpoejx7j.bkt.clouddn.com/systemstructure.png
+# img: http://pzpoejx7j.bkt.clouddn.com/systemstructure.png
 ---
 
 ## System structure

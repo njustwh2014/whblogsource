@@ -5,7 +5,7 @@ tags:
     - Java
     - Regex
 categories: Java
-img: http://pzpoejx7j.bkt.clouddn.com/regex.png
+# img: http://pzpoejx7j.bkt.clouddn.com/regex.png
 ---
 ## 什么是正则表达式
 正则表达式是一个定义**搜索模式**的字符串。

@@ -5,7 +5,7 @@ tags:
     - redis
     - Centos
 categories: Centos
-img: http://pzpoejx7j.bkt.clouddn.com/install-centos-7-logo.png
+# img: http://pzpoejx7j.bkt.clouddn.com/install-centos-7-logo.png
 ---
 
 > 在CentOS和Red Hat系统中，首先添加EPEL仓库，然后更新yum源：

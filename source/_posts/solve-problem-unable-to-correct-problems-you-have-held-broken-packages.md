@@ -5,7 +5,7 @@ tags:
     - Linux
     - apt
 categories: Linux
-img: http://pzpoejx7j.bkt.clouddn.com/linuxcover.jpg
+# img: http://pzpoejx7j.bkt.clouddn.com/linuxcover.jpg
 ---
 
 问题原因大多是因为依赖出问题。

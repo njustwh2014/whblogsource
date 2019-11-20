@@ -8,7 +8,7 @@ tags:
     - mysql
     - springboot
 categories: Concurrent
-img: http://pzpoejx7j.bkt.clouddn.com/concurrentcover.png
+# img: http://pzpoejx7j.bkt.clouddn.com/concurrentcover.png
 ---
 
 [源码地址](https://github.com/njustwh2014/seckill) refer to [TypCoding](https://github.com/TyCoding/springboot-seckill)

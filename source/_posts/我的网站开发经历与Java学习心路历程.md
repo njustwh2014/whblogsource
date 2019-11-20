@@ -1,10 +1,10 @@
 ---
 title: 我的网站开发经历与Java学习心路历程
 date: 2019-10-22 10:36:59
-img: http://pzpoejx7j.bkt.clouddn.com/image/javajava.png
+# img: http://pzpoejx7j.bkt.clouddn.com/image/javajava.png
 top: true
 cover: true
-coverImg: http://pzpoejx7j.bkt.clouddn.com/image/javajava.png
+# coverImg: http://pzpoejx7j.bkt.clouddn.com/image/javajava.png
 toc: false
 mathjax: false
 summary: 俱乐部网站以及个人博客网站介绍，以及从零开始接触Java的学习心路历程。

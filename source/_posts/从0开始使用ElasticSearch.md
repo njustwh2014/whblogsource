@@ -8,7 +8,7 @@ tags:
     - java
     - python
 categories: elasticsearch
-img: http://pzpoejx7j.bkt.clouddn.com/systemstructure.png
+# img: http://pzpoejx7j.bkt.clouddn.com/systemstructure.png
 ---
 
 ## 整体框架

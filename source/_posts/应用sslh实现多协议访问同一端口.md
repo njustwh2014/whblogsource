@@ -7,8 +7,8 @@ tags:
     - SSH
     - Nginx
 categories: 计算机网络
-img: http://pzpoejx7j.bkt.clouddn.com/sslh.png
-coverImg: http://pzpoejx7j.bkt.clouddn.com/sslh.png
+# img: http://pzpoejx7j.bkt.clouddn.com/sslh.png
+# coverImg: http://pzpoejx7j.bkt.clouddn.com/sslh.png
 
 ---
 

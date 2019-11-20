@@ -8,7 +8,7 @@ tags:
     - Lock
     - Condition
 categories: Concurrent
-img: http://pzpoejx7j.bkt.clouddn.com/concurrentcover.png
+# img: http://pzpoejx7j.bkt.clouddn.com/concurrentcover.png
 ---
 
 [我的github项目，有一些代码示例](https://github.com/njustwh2014/MyJavaRepo) forked from https://github.com/CL0610/Java-concurrency

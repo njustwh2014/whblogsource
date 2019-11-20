@@ -5,7 +5,7 @@ tags:
     - mysql
     - Centos
 categories: Centos
-img: http://pzpoejx7j.bkt.clouddn.com/install-centos-7-logo.png
+# img: http://pzpoejx7j.bkt.clouddn.com/install-centos-7-logo.png
 ---
 
 > 系统环境
@@ -97,4 +97,33 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
 FLUSH  PRIVILEGES;
 ```
+## mysql导入导出sql文件
 
+> 导出整个数据库
+```bash
+mysqldump -u 用户名 -p 数据库名 > 导出的文件名
+mysqldump -u dbuser -p dbname > dbname.sql
+```
+
+> 导出一个表
+```bash
+mysqldump -u 用户名 -p 数据库名 表名> 导出的文件名
+mysqldump -u dbuser -p dbname users> dbname_users.sql
+```
+> 导出一个数据库结构
+```bash
+mysqldump -u dbuser -p -d --add-drop-table dbname >d:/dbname_db.sql
+-d 没有数据 --add-drop-table 在每个create语句之前增加一个drop table
+```
+
+> 导入数据库
+常用source 命令
+进入mysql数据库控制台，如
+```bash
+mysql -u root -p
+mysql>use 数据库
+```
+然后使用source命令，后面参数为脚本文件(如这里用到的.sql)
+```bash
+mysql>source d:/dbname.sql
+```
