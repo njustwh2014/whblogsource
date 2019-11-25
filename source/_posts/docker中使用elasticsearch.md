@@ -14,7 +14,7 @@ docker images
 
 ## 启动容器
 ```bash
-docker run -d -p 9200:9200 -p 9300:9300 --name elasticsearch -v D:/elasticsearchdata:/data elasticsearch:6.5.0
+docker run -d -p 9200:9200 -p 9300:9300 -p 9200:9200 -p 5601:5601 --name elasticsearch -v D:/elasticsearchdata:/data elasticsearch:6.5.0
 
 docker ps
 ```
