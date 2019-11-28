@@ -28,3 +28,18 @@ docker logs -f grafana
 
 
 > 第一次登陆后我修改为:admin/trend#1..
+
+
+## grafana容器访问elasticsearch容器
+
+> 查看elasticsearch容器ip
+```bash
+docker inspect --format={{.NetworkSettings.IPAddress}} elasticsearch
+```
+
+result:
+```bash
+172.17.0.2
+```
+
+> [关于docker的网络类型](https://www.jianshu.com/p/0ded8d810860)
