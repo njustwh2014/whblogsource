@@ -43,3 +43,21 @@ result:
 ```
 
 > [关于docker的网络类型](https://www.jianshu.com/p/0ded8d810860)
+
+> 安装后一些目录作用
+```bash
+#主配置文件
+/etc/grafana/grafana.ini
+#数据文件
+/var/lib/grafana
+#home目录
+/usr/share/grafana
+#日志目录
+/var/log/grafana
+#插件目录
+/var/lib/grafana/plugins
+#自定义一些精细化配置的文件夹
+/etc/grafana/provisioning
+```
+
+[配置参考](https://www.li-rui.top/2018/12/12/monitor/grafana%E4%BD%BF%E7%94%A8/)
