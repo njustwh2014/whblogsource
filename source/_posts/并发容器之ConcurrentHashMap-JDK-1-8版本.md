@@ -37,11 +37,11 @@ JDK 1.6版本关键要素：
 
 1. **table**
 
-volatile Node<K,V>[] table://装载Node的数组，作为ConcurrentHashMap的数据容器，采用懒加载的方式，直到第一次插入数据的时候才会进行初始化操作，数组的大小总是为2的幂次方。
+`volatile Node<K,V>[] table;`://装载Node的数组，作为ConcurrentHashMap的数据容器，采用懒加载的方式，直到第一次插入数据的时候才会进行初始化操作，数组的大小总是为2的幂次方。
 
 2. **nextTable**
    
-volatile Node<K,V>[] nextTable; //扩容时使用，平时为null，只有在扩容的时候才为非null
+`volatile Node<K,V>[] nextTable;` //扩容时使用，平时为null，只有在扩容的时候才为非null
 
 3. **sizeCtl**
    
@@ -71,15 +71,15 @@ static {
 1. **Node**
 
 Node类实现了Map.Entry接口，主要存放key-value对，并且具有next域
-
-		static class Node<K,V> implements Map.Entry<K,V> {
-		        final int hash;
-		        final K key;
-		        volatile V val;
-		        volatile Node<K,V> next;
-				......
-		}
-
+```java
+static class Node<K,V> implements Map.Entry<K,V> {
+        final int hash;
+        final K key;
+        volatile V val;
+        volatile Node<K,V> next;
+        ......
+}
+```
 另外可以看出很多属性都是用volatile进行修饰的，也就是为了保证内存可见性。
 
 2. **TreeNode**
