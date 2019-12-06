@@ -30,7 +30,7 @@ JDK 1.6版本关键要素：
 
 而到了JDK 1.8的ConcurrentHashMap就有了很大的变化，光是代码量就足足增加了很多。1.8版本舍弃了segment，并且大量使用了synchronized，以及CAS无锁操作以保证ConcurrentHashMap操作的线程安全性。至于为什么不用ReentrantLock而是Synchronzied呢？实际上，synchronzied做了很多的优化，包括偏向锁，轻量级锁，重量级锁，可以依次向上升级锁状态，但不能降级，因此，使用synchronized相较于ReentrantLock的性能会持平甚至在某些情况更优，具体的性能测试可以去网上查阅一些资料。另外，底层数据结构改变为采用**数组+链表+红黑树**的数据形式。
 
-# 2.关键属性及类 #
+## 2.关键属性及类
 在了解ConcurrentHashMap的具体方法实现前，我们需要系统的来看一下几个关键的地方。
 
 > **ConcurrentHashMap的关键属性**
