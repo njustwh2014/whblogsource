@@ -218,7 +218,7 @@ private static final int tableSizeFor(int c) {
 ```
 通过注释就很清楚了，该方法会将调用构造器方法时指定的大小转换成一个2的幂次方数，也就是说ConcurrentHashMap的大小一定是2的幂次方，比如，当指定大小为18时，为了满足2的幂次方特性，实际上concurrentHashMapd的大小为2的5次方（32）。另外，需要注意的是，**调用构造器方法的时候并未构造出table数组（可以理解为ConcurrentHashMap的数据容器），只是算出table数组的长度，当第一次向ConcurrentHashMap插入数据的时候才真正的完成初始化创建table数组的工作**。
 
-## 3.2 initTable方法 ##
+### 3.2 initTable方法
 直接上源码：
 ```java
 private final Node<K,V>[] initTable() {
@@ -251,7 +251,7 @@ private final Node<K,V>[] initTable() {
 ```
 代码的逻辑请见注释，有可能存在一个情况是多个线程同时走到这个方法中，为了保证能够正确初始化，在第1步中会先通过if进行判断，若当前已经有一个线程正在初始化即sizeCtl值变为-1，这个时候其他线程在If判断为true从而调用Thread.yield()让出CPU时间片。正在进行初始化的线程会调用U.compareAndSwapInt方法将sizeCtl改为-1即正在初始化的状态。另外还需要注意的事情是，在第四步中会进一步计算数组中可用的大小即为数组实际大小n乘以加载因子0.75.可以看看这里乘以0.75是怎么算的，0.75为四分之三，这里`n - (n >>> 2)`是不是刚好是n-(1/4)n=(3/4)n，挺有意思的吧:)。如果选择是无参的构造器的话，这里在new Node数组的时候会使用默认大小为`DEFAULT_CAPACITY`（16），然后乘以加载因子0.75为12，也就是说数组的可用大小为12。
 
-## 3.3 put方法 ##
+### 3.3 put方法
 使用ConcurrentHashMap最长用的也应该是put和get方法了吧，我们先来看看put方法是怎样实现的。调用put方法时实际具体实现是putVal方法，源码如下：
 ```java
 /** Implementation for put and putIfAbsent */
