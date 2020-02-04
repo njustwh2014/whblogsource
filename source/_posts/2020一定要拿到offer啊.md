@@ -27,11 +27,9 @@ categories: 求职
 redis安装在130机器
 
 ```bash
-# 运行服务for windows
-docker run -it --name redis -v F:/codeHub/docker/redis/redis.conf:/usr/local/etc/redis/redis.conf -v F:/codeHub/docker/redis/data:/data -d -p 6379:6379 redis:latest /bin/bash
+# 运行服务
+docker run -it --name redis -v /root/wanghuan/docker/redis/cfg/redis.conf:/usr/local/etc/redis/redis.conf -v /root/wanghuan/docker/redis/data:/data -d -p 6379:6379 redis:latest /bin/bash
 
-# 运行服务 
-docker run -it --name redis -v /home/huanhuan/myweb/redisdata/redis.conf:/usr/local/etc/redis/redis.conf -v /home/huanhuan/myweb/redisdata/data:/data -d -p 6379:6379 redis:latest /bin/bash
 # 进入容器
 docker exec -it redis bash
 # 加载配置
@@ -40,7 +38,30 @@ redis-server /usr/local/etc/redis/redis.conf
 redis-cli -a wanghuan
 ```
 
+> tips: redis desktop manager for free: https://github.com/qishibo/AnotherRedisDesktopManager/
 
+### mysql安装部署备忘
+mysql安装在130机器
+
+```bash
+# pull image
+docker pull mysql:latest
+# run
+docker run --name mysql-mstc -v /root/wanghuan/docker/mysql/data:/data -e MYSQL_ROOT_PASSWORD=123456 -d -i -p 3306:3306 --restart=always  mysql:latest
+
+# 导出sql文件
+mysqldump -u root -p seumstc > F:/seumstc.sql
+# docker容器内导入sql文件
+# 进入docker容器
+docker exec -it mysql-mstc bash
+# 连接mysql
+mysql -u root -p
+# 新建数据库
+create database seumstc;
+use seumstc;
+# 导入sql文件
+source /data/seumstc.sql;
+```
 ## 数据类型
 
 > `new Integer(123)` 与 `Integer.valueOf(123)` 的区别在于
