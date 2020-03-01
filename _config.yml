@@ -148,3 +148,11 @@ deploy:
   type: git
   repository: https://github.com/njustwh2014/njustwh2014.github.io
   branch: master
+
+# sitemap
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+  
