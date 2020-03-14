@@ -504,6 +504,13 @@ instantpage:
 banner: 
   enable: true
 
+
+# Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+# fonts.lug.ustc.edu.cn是中科大的源
+host: //fonts.lug.ustc.edu.cn
+
+use_font_lato: false
+
 #ICP备案信息尾部显示
 icp:
   enable: false
