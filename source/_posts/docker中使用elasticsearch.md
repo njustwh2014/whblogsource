@@ -1,9 +1,6 @@
 ---
 title: docker中使用elasticsearch
 date: 2019-11-20 14:36:43
-tags:
-    - docker
-    - elasticsearch
 categories: docker
 ---
 ## 拉取镜像
@@ -11,7 +8,7 @@ categories: docker
 docker pull elasticsearch:6.5.0
 docker images
 ```
-
+<!--more-->
 ## 启动容器
 ```bash
 docker run -d  -p 9300:9300 -p 9200:9200 -p 5601:5601 --name elasticsearch -v D:/elasticsearchdata:/data elasticsearch:6.5.0

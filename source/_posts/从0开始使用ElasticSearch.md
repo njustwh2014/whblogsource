@@ -1,12 +1,7 @@
 ---
 title: 从0开始使用ElasticSearch
 date: 2019-11-08 09:36:06
-tags:
-    - elasticsearch
-    - kibana
-    - grafana
-    - java
-    - python
+tags: [elasticsearch,kibana,grafana,java,python]
 categories: elasticsearch
 # img: http://pzpoejx7j.bkt.clouddn.com/systemstructure.png
 ---
@@ -15,7 +10,7 @@ categories: elasticsearch
 ![System structure](http://pzpoejx7j.bkt.clouddn.com/systemstructure.png)
 
 + 首先监测Backup文件夹，由于公司lab环境和office环境ping不通，我利用我在公司个人文件夹，监测Backup文件夹，当有新的文件传入，会复制到我的个人文件夹data内。
-
+<!--more-->
 ![Backup截图](从0开始使用ElasticSearch/backup截图.png)
 
 

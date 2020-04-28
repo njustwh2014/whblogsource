@@ -1,9 +1,6 @@
 ---
 title: Java中正则表达式使用
 date: 2019-10-28 11:15:43
-tags: 
-    - Java
-    - Regex
 categories: Java
 # img: http://pzpoejx7j.bkt.clouddn.com/regex.png
 ---
@@ -11,7 +8,7 @@ categories: Java
 正则表达式是一个定义**搜索模式**的字符串。
 
 ## 示例
-
+<!--more-->
 |正则表达式|匹配|
 |:-------|:---------------------------|
 |this is text|精确匹配到字符串this is text|

@@ -1,7 +1,6 @@
 ---
 title: JVM面试总结
 date: 2020-03-16 09:07:38
-tags:
 categories: 求职
 ---
 
@@ -10,7 +9,7 @@ categories: 求职
 Java虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是**虚拟机的加载机制**。
 
 [要看看哦](https://juejin.im/post/5a810b0e5188257a5c606a85#heading-1)
-
+<!--more-->
 ### 类加载时机
 
 类从被虚拟机加载到内存中开始，到卸载出内存为止，它的生命周期经历了**加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）和卸载（Unloading）**，一共七个阶段，其中验证、准备、解析部分统称为连接。

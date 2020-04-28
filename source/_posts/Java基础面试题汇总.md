@@ -1,10 +1,6 @@
 ---
 title: Java基础面试题汇总
 date: 2020-03-13 20:32:50
-tags: 
-    - Java 
-    - Springboot
-    - JVM
 categories: 求职
 ---
 
@@ -15,7 +11,7 @@ categories: 求职
 + 堆排序如何实现？
 
 [参考连接](https://blog.csdn.net/u013309870/article/details/71189189)
-
+<!--more-->
 
 ## 为什么要重写hashCode和equals方法
 

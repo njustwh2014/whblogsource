@@ -5,11 +5,11 @@
 # Site
 title: Eternal Horizon
 subtitle: 每天进步一点点
-description: 属于王欢的私人博客，记录学习心得、读书感受以及一些Java知识。
+description: 记录学习心得、读书感受以及一些Java知识。
 keywords: Java, 中间件, Spring, Redis
 author: Wang Huan
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -31,22 +31,19 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude:
-filename_case: 0
-render_drafts: false
-post_asset_folder: true # to enable 引用自带图片
-relative_link: false
+new_post_name: :title.md # 默认的新博文名称
+default_layout: post # 默认布局
+titlecase: false # 把标题转换为 titlecase（titlecase指的是将每个单词首字母转换成大写）
+external_link: true # 在新标签中打开链接
+filename_case: 0 #把文件名称转换为 (1) 小写或 (2) 大写, 0表示不变
+render_drafts: false # 是否显示草稿
+post_asset_folder: true #是否启用资源文件夹（用来存放相对路径图片或文件）
+relative_link: false # 把链接改为与根目录的相对位址
 future: true
 highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
+  enable: true #是否开启代码高亮
+  line_number: false #是否增加代码行号
+  auto_detect: false #自动判断代码语言
   tab_replace:
 
 # Home page setting
@@ -54,9 +51,9 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
-  per_page: 9
-  order_by: -date
+  path: '' #博客的默认路径
+  per_page: 10 #每页博客数量上限
+  order_by: -date #博客排序
 
 # Category & Tag
 default_category: uncategorized
@@ -69,7 +66,11 @@ githubEmojis:
   inject: true
   styles:
   customEmojis:
-
+excerpt:
+  depth: 10
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
 # marked配置
 marked:
   gfm: true
@@ -87,6 +88,14 @@ marked:
     exclude: []
     nofollow: false
 
+# hexo-tag-cloud
+tag_cloud:
+  textFont: Trebuchet MS, Helvetica
+  textColor: '#333'
+  textHeight: 25
+  outlineColor: '#E2E1D1'
+  maxSpeed: 0.1
+
 # 代码高亮
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
@@ -97,6 +106,8 @@ prism_plugin:
 search:
   path: search.xml
   field: post
+  format: html
+  limit: 10000
 
 # 中文转拼音
 permalink_pinyin:
@@ -137,7 +148,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-matery
+theme: next
 
 
 

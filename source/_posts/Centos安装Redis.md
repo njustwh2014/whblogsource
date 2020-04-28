@@ -1,9 +1,6 @@
 ---
 title: Centos安装Redis
 date: 2019-11-13 16:07:23
-tags:
-    - redis
-    - Centos
 categories: Centos
 # img: http://pzpoejx7j.bkt.clouddn.com/install-centos-7-logo.png
 ---
@@ -14,7 +11,7 @@ categories: Centos
 sudo yum install epel-release
 sudo yum update
 ```
-
+<!--more-->
 > 然后安装redis
 ```bash
 sudo yum -y install redis

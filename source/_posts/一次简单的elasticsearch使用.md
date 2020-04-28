@@ -1,10 +1,6 @@
 ---
 title: 一次简单的elasticsearch使用
 date: 2019-10-30 14:52:29
-tags:
-    - elasticsearch
-    - grafana
-    - java
 categories: elasticsearch
 # img: http://pzpoejx7j.bkt.clouddn.com/systemstructure.png
 ---
@@ -15,10 +11,10 @@ categories: elasticsearch
 + When the file directory is updated，the live thread of pool will work for unzipping zip file and extracting all XML files then resolving XML files to json files.
 + Put all json files to elasticsearch.
 + Visualize data of elasticsearch by Grafana.
-  
+
 ## Monitor the folder
 Use Java class: **WatchService**
-
+<!--more-->
 This class allows you to monitor changes to files in the operating system in real time, including creating, updating, and deleting events.
 
 the core code:

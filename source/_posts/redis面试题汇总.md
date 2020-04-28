@@ -1,8 +1,6 @@
 ---
 title: redis面试题汇总
 date: 2020-03-13 20:49:29
-tags: 
-    - Redis
 categories: 求职
 ---
 ## 常见应用
@@ -15,7 +13,7 @@ categories: 求职
 缓存是Redis最常见的应用场景。
 
 这里面试官可能会问，Redis和memcached比较以及如何保证缓存一致。
-
+<!--more-->
 缓存可能会问到Redis缓存实现方式,主要有两种
 
 + 方案1：读取前会先查询Redis，如果没有命中数据则会去查询数据库比如Mysql，然后拉取数据进Redis

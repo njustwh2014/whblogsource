@@ -1,8 +1,6 @@
 ---
 title: Mysql面试汇总
 date: 2020-03-13 20:59:55
-tags: 
-    - Mysql
 categories: 求职
 ---
 
@@ -13,7 +11,7 @@ categories: 求职
 联合主键体现在多个表上，复合主键体现在一个表中的多个字段
 
 联合主键：
-
+<!--more-->
 ```sql
 -- 学生表：student
 

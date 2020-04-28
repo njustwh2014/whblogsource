@@ -1,9 +1,6 @@
 ---
 title: centos7安装mysql
 date: 2019-11-11 15:36:25
-tags:
-    - mysql
-    - Centos
 categories: Centos
 # img: http://pzpoejx7j.bkt.clouddn.com/install-centos-7-logo.png
 ---
@@ -16,7 +13,7 @@ Centos 7.6 64位
 ## 添加mysql yum源
 
 在centOS上直接使用yum install mysql安装，最后安装上的会是MariaDB，所以要先添加mysql yum源。
-
+<!--more-->
 ```bash
 rpm -Uvh https://repo.mysql.com//mysql80-community-release-el7-2.noarch.rpm
 ```

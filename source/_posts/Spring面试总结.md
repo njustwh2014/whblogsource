@@ -1,7 +1,6 @@
 ---
 title: Spring面试总结
 date: 2020-03-16 09:08:26
-tags:
 categories: 求职
 ---
 
@@ -12,7 +11,7 @@ AOP 面向切面编程，是对面向对象的补充，处理系统中各个模�
 AOP实现的关键在于AOP框架自动创建AOP代理，常有以AspectJ为代表的静态代理，和以SpringAop为代表的动态代理
 
 SpringAop的实现方式主要有通过反射的JDK动态代理和CGLIB(Code Generation Library).
-
+<!--more-->
 + JDK动态代理：核心是`InvocationHandler`接口和`Proxy`类，目标类必须是个实现接口的类
 
     - 基于标准的JDK动态代理

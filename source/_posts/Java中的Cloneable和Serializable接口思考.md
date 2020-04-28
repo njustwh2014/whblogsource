@@ -1,10 +1,6 @@
 ---
 title: Java中的Cloneable和Serializable接口思考
 date: 2019-12-06 09:57:06
-tags:
-    - Java
-    - Cloneable
-    - Serializable
 categories: Java
 ---
 
@@ -15,7 +11,7 @@ categories: Java
 Java中一个类要实现clone()方法，必须实现Cloneable接口，否则在调用clone()方法时会报CloneNotSupportException异常。
 
 > 需要说明：
-
+<!--more-->
 1. 对象拷贝返回的是一个新对象，而不是一个引用。
 2. 拷贝对象与用 new操作符返回的新对象的区别就是这个拷贝已经包含了一些原来对象的信息，而不是对象的初始信息。
 

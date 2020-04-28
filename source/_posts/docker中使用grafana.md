@@ -1,9 +1,6 @@
 ---
 title: docker中使用grafana
 date: 2019-11-28 13:54:07
-tags:
-    - docker
-    - grafana
 categories: docker
 ---
 
@@ -12,7 +9,7 @@ categories: docker
 ```bash
 docker search grafana
 ```
-
+<!--more-->
 ## 拉取grafana镜像
 ```bash
 docker pull grafana/grafana:latest

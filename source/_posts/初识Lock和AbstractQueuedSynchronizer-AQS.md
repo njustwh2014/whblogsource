@@ -1,21 +1,15 @@
 ---
 title: 初识Lock和AbstractQueuedSynchronizer(AQS)
 date: 2019-11-04 15:35:52
-tags:
-    - Concurrent
-    - Java
-    - AQS
-    - Lock
-    - Condition
+tags: [Concurrent,Java,AQS,Lock,Condition]
 categories: Concurrent
-# img: http://pzpoejx7j.bkt.clouddn.com/concurrentcover.png
 ---
 
 [我的github项目，有一些代码示例](https://github.com/njustwh2014/MyJavaRepo) forked from https://github.com/CL0610/Java-concurrency
 
 ## 1. concurrent包的结构层次
 在针对并发编程中，Doug Lea大师为我们提供了大量实用，高性能的工具类，针对这些代码进行研究会让我们对并发编程的掌握更加透彻也会大大提升我们对并发编程技术的热爱。这些代码在java.util.concurrent包下。如下图，即为concurrent包的目录结构图。
-
+<!--more-->
 ![concurrent目录结构.png](初识Lock和AbstractQueuedSynchronizer-AQS/concurrent目录结构.png)
 
 

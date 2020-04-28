@@ -1,12 +1,6 @@
 ---
 title: centos上部署docker、java、nginx、elasticsearch
 date: 2019-12-05 10:00:46
-tags:
-    - docker
-    - java
-    - nginx
-    - elasticsearch
-    - vue
 categories: Centos
 ---
 
@@ -18,7 +12,7 @@ cat /etc/redhat-release
 > [版本信息参考链接](https://blog.csdn.net/shuaigexiaobo/article/details/78030008)
 
 **开启相应端口**
-
+<!--more-->
 ## centos中安装docker
 
 ```bash

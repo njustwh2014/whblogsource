@@ -1,11 +1,6 @@
 ---
 title: 应用sslh实现多协议访问同一端口
 date: 2019-10-22 09:05:12
-tags:
-    - Https
-    - SSLH
-    - SSH
-    - Nginx
 categories: 计算机网络
 # img: http://pzpoejx7j.bkt.clouddn.com/sslh.png
 # coverImg: http://pzpoejx7j.bkt.clouddn.com/sslh.png
@@ -18,7 +13,7 @@ categories: 计算机网络
 ![sslh](http://pzpoejx7j.bkt.clouddn.com/sslh.png)
 
 ## 基本步骤：
-
+<!--more-->
 + 首先安装web服务器(tomcat, nginx etc.)，使之监听在localhost(default port 80), 当然也可以监听在非标准端口如8088
 + 设置ssh服务端口22的连接，这个端口也可以是任意的，但标准的是22
 + (optional)创建一个非特权用户 如sslh

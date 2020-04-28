@@ -1,12 +1,7 @@
 ---
 title: 2020一定要拿到offer啊
 date: 2020-02-02 11:06:02
-tags: 
-    - Java 
-    - Redis
-    - Mysql
-    - Vue
-    - Springboot
+tags: [Java,Redis,Mysql,Vue,Springboot]
 categories: 求职
 ---
 # 学习计划
@@ -19,6 +14,7 @@ categories: 求职
 + 后端部署在131虚拟机
 
 > leetcode刷题
+<!--more-->
 
 ## 网站重新部署和优化工作
 

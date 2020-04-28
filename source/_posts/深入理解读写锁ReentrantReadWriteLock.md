@@ -1,14 +1,8 @@
 ---
 title: 深入理解读写锁ReentrantReadWriteLock
 date: 2019-11-08 13:06:39
-tags:
-    - Concurrent
-    - Java
-    - AQS
-    - Lock
-    - Condition
+tags: [Concurrent,Java,AQS,Lock,Condition]
 categories: Concurrent
-# img: http://pzpoejx7j.bkt.clouddn.com/concurrentcover.png
 ---
 
 [我的github项目，有一些代码示例](https://github.com/njustwh2014/MyJavaRepo) forked from https://github.com/CL0610/Java-concurrency
@@ -21,7 +15,7 @@ categories: Concurrent
 1. **公平性选择**：支持非公平性（默认）和公平的锁获取方式，吞吐量还是非公平优于公平；
 2. **重入性**：支持重入，读锁获取后能再次获取，写锁获取之后能够再次获取写锁，同时也能够获取读锁；
 3. **锁降级**：遵循获取写锁，获取读锁再释放写锁的次序，写锁能够降级成为读锁
-
+<!--more-->
 要想能够彻底的理解读写锁必须能够理解这样几个问题：
 1. 读写锁是怎样实现分别记录读写状态的？
 2. 写锁是怎样获取和释放的？

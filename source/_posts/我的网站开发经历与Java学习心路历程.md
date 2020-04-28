@@ -1,21 +1,9 @@
 ---
 title: 我的网站开发经历与Java学习心路历程
 date: 2019-10-22 10:36:59
-# img: http://pzpoejx7j.bkt.clouddn.com/image/javajava.png
-top: true
-cover: true
-# coverImg: http://pzpoejx7j.bkt.clouddn.com/image/javajava.png
-toc: false
 mathjax: false
-summary: 俱乐部网站以及个人博客网站介绍，以及从零开始接触Java的学习心路历程。
 categories: Java
-tags:
-  - Java
-  - Spring
-  - JavaScript
-  - Vue
-  - redis
-  - mysql
+tags: []
 ---
 
 ## 网站介绍
@@ -27,7 +15,7 @@ http://www.seumstc.top:8090/index.html
 ### 什么是前后端分离的开发模式
 
 **Web研发模式演变：**https://github.com/lifesinger/blog/issues/184
-
+<!--more-->
 
 ### 开发这样一个网站我们需要的技术栈
 
