@@ -34,7 +34,9 @@ npm install hexo-generator-sitemap --save
 hexo g
 
 hexo d
+
 ```
+test
 
 
 
