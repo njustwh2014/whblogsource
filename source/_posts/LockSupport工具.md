@@ -9,7 +9,7 @@ categories: Concurrent
 
 
 ## 1. LockSupport简介
-在之前介绍[AQS的底层实现](http://eternalhorizon.cn/2019/11/05/shen-ru-li-jie-abstractqueuedsynchronizer-aqs/)，已经在介绍java中的Lock时，比如[ReentrantLock](http://eternalhorizon.cn/2019/11/05/che-di-li-jie-reentrantlock/),[ReentReadWriteLocks](http://eternalhorizon.cn/2019/11/08/shen-ru-li-jie-du-xie-suo-reentrantreadwritelock/),已经在介绍线程间等待/通知机制使用的[Condition](http://eternalhorizon.cn/2019/11/08/xiang-jie-condition-de-await-he-signal-deng-dai-tong-zhi-ji-zhi/)时都会调用LockSupport.park()方法和LockSupport.unpark()方法。而这个在同步组件的实现中被频繁使用的LockSupport到底是何方神圣，现在就来看看。LockSupport位于java.util.concurrent.locks包下，有兴趣的可以直接去看源码，该类的方法并不是很多。LockSupprot是线程的阻塞原语，用来阻塞线程和唤醒线程。每个使用LockSupport的线程都会与一个许可关联，如果该许可可用，并且可在线程中使用，则调用park()将会立即返回，否则可能阻塞。如果许可尚不可用，则可以调用 unpark 使其可用。但是注意许可**不可重入**，也就是说只能调用一次park()方法，否则会一直阻塞。
+在之前介绍[AQS的底层实现](http://wanghuan.tech/2019/11/05/shen-ru-li-jie-abstractqueuedsynchronizer-aqs/)，已经在介绍java中的Lock时，比如[ReentrantLock](http://wanghuan.tech/2019/11/05/che-di-li-jie-reentrantlock/),[ReentReadWriteLocks](http://wanghuan.tech/2019/11/08/shen-ru-li-jie-du-xie-suo-reentrantreadwritelock/),已经在介绍线程间等待/通知机制使用的[Condition](http://wanghuan.tech/2019/11/08/xiang-jie-condition-de-await-he-signal-deng-dai-tong-zhi-ji-zhi/)时都会调用LockSupport.park()方法和LockSupport.unpark()方法。而这个在同步组件的实现中被频繁使用的LockSupport到底是何方神圣，现在就来看看。LockSupport位于java.util.concurrent.locks包下，有兴趣的可以直接去看源码，该类的方法并不是很多。LockSupprot是线程的阻塞原语，用来阻塞线程和唤醒线程。每个使用LockSupport的线程都会与一个许可关联，如果该许可可用，并且可在线程中使用，则调用park()将会立即返回，否则可能阻塞。如果许可尚不可用，则可以调用 unpark 使其可用。但是注意许可**不可重入**，也就是说只能调用一次park()方法，否则会一直阻塞。
 <!--more-->
 ## 2. LockSupport方法介绍
 LockSupport中的方法不多，这里将这些方法做一个总结：

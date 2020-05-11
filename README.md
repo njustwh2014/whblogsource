@@ -36,7 +36,6 @@ hexo g
 hexo d
 
 ```
-test
 
 
 
