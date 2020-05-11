@@ -9,6 +9,8 @@ categories: Mysql
 
 mybatis-generator会为每个字段产生Criterion，为底层的mapper.xml创建动态sql。理论上通过Example类可以构造出任何筛选条件。
 
+<!--more-->
+
 ## 了解Example类的成员变量
 
 ```java
