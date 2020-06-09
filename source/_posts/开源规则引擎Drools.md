@@ -1,7 +1,7 @@
 ---
 title: 开源规则引擎Drools
 date: 2020-06-04 19:19:46
-tags:[Drools]
+tags: [Drools]
 categories: Drools
 ---
 
@@ -13,6 +13,7 @@ categories: Drools
 
 目前Java开源的规则引擎主要有：Drools、Easy Rules、Mandarax、IBM ILOG。使用最广泛并且开源的是Drools。
 
+<!--more-->
 
 ### 规则引擎的优点
 
@@ -211,3 +212,7 @@ public class Message {
 ## 整合Spring，动态从数据库覆盖原有的规则
 
 ## 参考文献
+
++ [规则引擎](https://www.ibm.com/developerworks/cn/opensource/os-drools/index.html)
+
++ [规则语法drl](http://einverne.github.io/post/2019/03/drools-syntax.html)
