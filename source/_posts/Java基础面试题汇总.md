@@ -13,6 +13,29 @@ categories: 求职
 [参考连接](https://blog.csdn.net/u013309870/article/details/71189189)
 <!--more-->
 
+## 单例模式为什么需要double check？
+
+```java
+public class SingleInstance{
+    private static volatile SingleInstance instance; //使用volatile禁止命令重排序，防止获得了未被初始化的实例
+
+    private SingleInstance(){
+    } 
+    public SingleInstance getInstance(){
+        if(null == instance){
+            //第一次检查是为了避免每次都加锁，只有当instance==null时才需要加锁
+            synchronised(SingleInstance.class){
+                if(null == instance){
+                    //第二次检查是为了防止多个线程同时请求getInstance只有一个线程进行了实例化对象，其他线程获取锁以后再实例化一个对象
+                    instance = new SingleInsatnce();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+
 ## 为什么要重写hashCode和equals方法
 
 如果不重写，则会默认调用Object类的hashCode和equals方法，Object类的hashCode方法是根据对象内存首地址计算得到，equals方法也同样是根据对象内存首地址进行判断。这在很多场景下是不可用的。
