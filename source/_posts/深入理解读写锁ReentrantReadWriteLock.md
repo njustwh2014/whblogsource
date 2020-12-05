@@ -10,7 +10,7 @@ categories: Concurrent
 
 
 ## 1.读写锁的介绍
-在并发场景中用于解决线程安全的问题，我们几乎会高频率的使用到独占式锁，通常使用java提供的关键字synchronized或者concurrents包中实现了Lock接口的[ReentrantLock](http://wanghuan.tech/2019/11/05/che-di-li-jie-reentrantlock/)。它们都是独占式获取锁，也就是在同一时刻只有一个线程能够获取锁。而在一些业务场景中，大部分只是读数据，写数据很少，如果仅仅是读数据的话并不会影响数据正确性（出现脏读），而如果在这种业务场景下，依然使用独占锁的话，很显然这将是出现**性能瓶颈**的地方。针对这种读多写少的情况，java还提供了另外一个实现Lock接口的ReentrantReadWriteLock(读写锁)。**读写所允许同一时刻被多个读线程访问，但是在写线程访问时，所有的读线程和其他的写线程都会被阻塞**。在分析WirteLock和ReadLock的互斥性时可以按照WriteLock与WriteLock之间，WriteLock与ReadLock之间以及ReadLock与ReadLock之间进行分析。更多关于读写锁特性介绍大家可以看源码上的介绍（阅读源码时最好的一种学习方式，我也正在学习中，与大家共勉），这里做一个归纳总结：
+在并发场景中用于解决线程安全的问题，我们几乎会高频率的使用到独占式锁，通常使用java提供的关键字synchronized或者concurrents包中实现了Lock接口的[ReentrantLock](http://njustwh2014.github.io/2019/11/05/che-di-li-jie-reentrantlock/)。它们都是独占式获取锁，也就是在同一时刻只有一个线程能够获取锁。而在一些业务场景中，大部分只是读数据，写数据很少，如果仅仅是读数据的话并不会影响数据正确性（出现脏读），而如果在这种业务场景下，依然使用独占锁的话，很显然这将是出现**性能瓶颈**的地方。针对这种读多写少的情况，java还提供了另外一个实现Lock接口的ReentrantReadWriteLock(读写锁)。**读写所允许同一时刻被多个读线程访问，但是在写线程访问时，所有的读线程和其他的写线程都会被阻塞**。在分析WirteLock和ReadLock的互斥性时可以按照WriteLock与WriteLock之间，WriteLock与ReadLock之间以及ReadLock与ReadLock之间进行分析。更多关于读写锁特性介绍大家可以看源码上的介绍（阅读源码时最好的一种学习方式，我也正在学习中，与大家共勉），这里做一个归纳总结：
 
 1. **公平性选择**：支持非公平性（默认）和公平的锁获取方式，吞吐量还是非公平优于公平；
 2. **重入性**：支持重入，读锁获取后能再次获取，写锁获取之后能够再次获取写锁，同时也能够获取读锁；
@@ -26,7 +26,7 @@ categories: Concurrent
 ## 2.写锁详解
 
 ### 2.1.写锁的获取
-同步组件的实现聚合了同步器（AQS），并通过重写重写同步器（AQS）中的方法实现同步组件的同步语义（关于同步组件的实现层级结构可以[看这篇文章](http://wanghuan.tech/2019/11/04/chu-shi-lock-he-abstractqueuedsynchronizer-aqs/)，AQS的底层实现分析可以[看这篇文章](http://wanghuan.tech/2019/11/05/shen-ru-li-jie-abstractqueuedsynchronizer-aqs/)）。因此，写锁的实现依然也是采用这种方式。在同一时刻写锁是不能被多个线程所获取，很显然**写锁是独占式锁**，而实现写锁的同步语义是通过重写AQS中的tryAcquire方法实现的。源码为:
+同步组件的实现聚合了同步器（AQS），并通过重写重写同步器（AQS）中的方法实现同步组件的同步语义（关于同步组件的实现层级结构可以[看这篇文章](http://njustwh2014.github.io/2019/11/04/chu-shi-lock-he-abstractqueuedsynchronizer-aqs/)，AQS的底层实现分析可以[看这篇文章](http://njustwh2014.github.io/2019/11/05/shen-ru-li-jie-abstractqueuedsynchronizer-aqs/)）。因此，写锁的实现依然也是采用这种方式。在同一时刻写锁是不能被多个线程所获取，很显然**写锁是独占式锁**，而实现写锁的同步语义是通过重写AQS中的tryAcquire方法实现的。源码为:
 ```java
 protected final boolean tryAcquire(int acquires) {
     /*
