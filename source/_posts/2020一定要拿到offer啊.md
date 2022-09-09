@@ -1,5 +1,5 @@
 ---
-title: 2020一定要拿到offer啊
+title: 2020一定要拿到offer呀
 date: 2020-02-02 11:06:02
 tags: [Java,Redis,Mysql,Vue,Springboot]
 categories: 求职
